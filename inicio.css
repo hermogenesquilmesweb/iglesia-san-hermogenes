@@ -1,0 +1,323 @@
+/* RESET y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fef5e7;  /* crema más pálido */
+    font-family: 'Segoe UI', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    line-height: 1.5;
+    color: #2b1a0f;  /* marrón oscuro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado - estilo ruso */
+#Encabezado {
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+    background-color: #6b1d0e;  /* rojo ruso profundo */
+    border-bottom: 5px solid #c9952b;  /* oro viejo */
+}
+
+#Encabezado h1 {
+    font-size: 1.8rem;
+}
+
+#Encabezado h1 a {
+    color: #f3d382;  /* dorado claro */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#Encabezado h1 a:hover {
+    color: #ffffff;
+}
+
+#Encabezado p {
+    font-style: italic;
+    color: #f3d382;
+    margin: 0.5rem 0 1rem;
+}
+
+#Encabezado img {
+    max-width: 100%;
+    width: 15%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    border: 4px solid #2f5a3a;  /* verde oscuro icónico */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Botonera */
+.botonera {
+    background-color: #2f5a3a;  /* verde ruso oscuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.botonera ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    margin: 0;
+}
+
+.botonera li a {
+    display: inline-block;
+    background-color: #fef5e7;
+    color: #6b1d0e;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.7rem 1.2rem;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    border: 1px solid #c9952b;
+    font-size: 1rem;
+}
+
+.botonera li a:hover {
+    background-color: #c9952b;
+    color: #2b1a0f;
+    transform: scale(1.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-color: #f3d382;
+}
+
+/* Main y secciones comunes */
+main {
+    flex: 1;
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Contenedor de dos columnas igual altura */
+.contenedor-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: stretch;  /* Para que ambas columnas tengan la misma altura */
+}
+
+/* Bienvenida */
+.bienvenida {
+    flex: 1;
+    min-width: 250px;
+    background: #fffaf2;
+    padding: 2rem;
+    border-radius: 28px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border-top: 4px solid #c9952b;
+    border-bottom: 4px solid #c9952b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bienvenida h2 {
+    color: #9b2e1c;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.bienvenida p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Enlaces de interés */
+.enlaces-interes {
+    flex: 1;
+    min-width: 250px;
+    background: #fffaf2;
+    border-radius: 28px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0e0c8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.enlaces-interes h2 {
+    color: #9b2e1c;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-left: 4px solid #c9952b;
+    padding-left: 1rem;
+}
+
+.lista-enlaces {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.lista-enlaces li {
+    margin-bottom: 0.8rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #e0cfb5;
+}
+
+.lista-enlaces li:last-child {
+    border-bottom: none;
+}
+
+.lista-enlaces a {
+    color: #2f5a3a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 0.2rem 0;
+    font-size: 1rem;
+}
+
+.lista-enlaces a:hover {
+    color: #9b2e1c;
+    transform: translateX(5px);
+    text-decoration: underline;
+}
+
+.nota-enlaces {
+    font-size: 0.8rem;
+    color: #8b5a2b;
+    font-style: italic;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #f0e0c8;
+}
+
+/* Responsive: en celulares se apilan */
+@media (max-width: 768px) {
+    .contenedor-columnas {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .bienvenida h2 {
+        font-size: 1.5rem;
+    }
+    
+    .enlaces-interes h2 {
+        font-size: 1.5rem;
+    }
+    
+    .bienvenida, .enlaces-interes {
+        padding: 1.5rem;
+    }
+}
+
+.lista-enlaces {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.lista-enlaces li {
+    margin-bottom: 0.8rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #e0cfb5;
+}
+
+.lista-enlaces li:last-child {
+    border-bottom: none;
+}
+
+.lista-enlaces a {
+    color: #2f5a3a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 0.2rem 0;
+    font-size: 1.05rem;
+}
+
+.lista-enlaces a:hover {
+    color: #9b2e1c;
+    transform: translateX(5px);
+    text-decoration: underline;
+}
+
+.nota-enlaces {
+    font-size: 0.85rem;
+    color: #8b5a2b;
+    font-style: italic;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #f0e0c8;
+}
+
+/* Ajuste responsive para los enlaces */
+@media (max-width: 700px) {
+    .enlaces-interes {
+        padding: 1.2rem;
+    }
+    
+    .enlaces-interes h2 {
+        font-size: 1.5rem;
+    }
+    
+    .lista-enlaces a {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #6b1d0e;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #f3d382;
+    border-top: 4px solid #c9952b;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* Diseño responsive */
+@media (max-width: 700px) {
+    .botonera ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+    }
+    
+    .botonera li a {
+        text-align: center;
+    }
+    
+    #Encabezado h1 {
+        font-size: 1.4rem;
+    }
+    
+    .bienvenida h2 {
+        font-size: 1.6rem;
+    }
+    
+    #Encabezado img {
+        width: 80%;
+    }
+}
