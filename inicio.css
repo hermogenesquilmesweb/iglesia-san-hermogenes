@@ -303,6 +303,25 @@ footer p {
     margin: 0.3rem 0;
 }
 
+.mapa-footer p a {
+    display: inline-block;
+    font-size: 1.1rem;        /* Tamaño de letra más grande */
+    font-weight: bold;
+    color: #f3d382;           /* Dorado claro - contrasta con fondo rojo */
+    background-color: #9b2e1c; /* Fondo rojo ruso para destacar aún más */
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.mapa-footer p a:hover {
+    background-color: #c9952b; /* Dorado al pasar el mouse */
+    color: #6b1d0e;            /* Texto rojo oscuro */
+    transform: scale(1.02);
+}
+
 /* Diseño responsive */
 @media (max-width: 700px) {
     .botonera ul {
