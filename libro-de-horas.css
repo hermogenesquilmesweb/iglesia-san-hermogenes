@@ -1,0 +1,303 @@
+/* ============================================
+   ESTILOS PARA EL LIBRO DE LAS HORAS
+   VERSIÓN MEJORADA - MÁS ESPACIO Y LEGIBILIDAD
+   ============================================ */
+
+.libro-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Títulos principales */
+.libro-titulo-principal {
+    text-align: center;
+    color: #9b2e1c;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.libro-subtitulo {
+    text-align: center;
+    color: #6b1d0e;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    /* eliminá cualquier font-family si lo tiene */
+}
+
+.libro-autor {
+    text-align: center;
+    color: #8b5a2b;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+}
+
+/* Cada sección - con más espacio */
+.seccion {
+    background: #fffaf2;
+    border-radius: 28px;
+    padding: 2rem 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    border-left: 6px solid #c9952b;
+    transition: all 0.2s ease;
+}
+
+.seccion:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternar colores de fondo para cada sección */
+.seccion:nth-child(even) {
+    background: #fef5e7;
+    border-left-color: #9b2e1c;
+}
+
+.seccion:nth-child(odd) {
+    background: #fffaf2;
+    border-left-color: #c9952b;
+}
+
+/* Títulos dentro de secciones - más destacados */
+.seccion h3 {
+    color: #9b2e1c;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #e0cfb5;
+    padding-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.seccion h4 {
+    color: #6b1d0e;
+    font-size: 1.3rem;
+    margin: 1.2rem 0 0.8rem;
+}
+
+/* Párrafos - más espacio y mejor legibilidad */
+.seccion p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    color: #2b1a0f;
+}
+
+/* Listas dentro de secciones */
+.seccion ul,
+.seccion ol {
+    margin: 1rem 0 1.2rem 1.8rem;
+    line-height: 1.7;
+}
+
+.seccion li {
+    margin-bottom: 0.5rem;
+}
+
+/* Texto destacado */
+.seccion strong {
+    color: #9b2e1c;
+}
+
+.seccion em {
+    color: #8b5a2b;
+}
+
+/* Estilo para las citas / blockquotes - más destacadas */
+.seccion blockquote {
+    margin: 1.2rem 0;
+    padding: 1rem 1.8rem;
+    background: #fef0df;
+    border-left: 6px solid #9b2e1c;
+    font-style: italic;
+    color: #5a3a1a;
+    border-radius: 16px;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+/* Índice - más organizado */
+.indice {
+    background: #fef0df;
+    border-left: 6px solid #c9952b;
+    padding: 1.8rem;
+}
+
+.indice h3 {
+    color: #9b2e1c;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.indice-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.indice-lista li {
+    margin-bottom: 0.5rem;
+    width: calc(50% - 0.8rem);
+}
+
+.indice-lista a {
+    color: #2f5a3a;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0.8rem;
+    background: #fffaf2;
+    border-radius: 12px;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.indice-lista a:hover {
+    color: #9b2e1c;
+    background: #ffe8cc;
+    transform: translateX(5px);
+}
+
+/* Créditos finales */
+.creditos {
+    text-align: center;
+    background: #2f5a3a;
+    border-left-color: #c9952b;
+}
+
+.creditos p {
+    color: #f3d382;
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   MEJORAS: Separación visual y botón volver
+   ============================================ */
+
+/* Mayor separación entre secciones */
+.seccion {
+    scroll-margin-top: 80px;
+}
+
+/* Línea decorativa entre secciones - más sutil */
+.seccion::after {
+    content: "☦️";
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #c9952b;
+    margin-top: 1.2rem;
+    opacity: 0.4;
+}
+
+/* El último bloque no necesita la línea decorativa */
+.seccion:last-child::after {
+    display: none;
+}
+
+/* Botón Volver al inicio */
+.boton-volver {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.7rem 1.4rem;
+    background-color: #2f5a3a;
+    color: #f3d382;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 1px solid #c9952b;
+    text-align: center;
+}
+
+.boton-volver:hover {
+    background-color: #c9952b;
+    color: #6b1d0e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor para centrar el botón */
+.volver-container {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* ============================================
+   RESPONSIVE: para celular
+   ============================================ */
+
+@media (max-width: 768px) {
+    .libro-container {
+        padding: 0 0.8rem;
+    }
+
+    .libro-titulo-principal {
+        font-size: 1.8rem;
+    }
+
+    .libro-subtitulo {
+        font-size: 1.2rem;
+    }
+
+    .seccion {
+        padding: 1.2rem 1.2rem;
+        margin-bottom: 1.8rem;
+        border-radius: 20px;
+    }
+
+    .seccion h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .seccion p {
+        font-size: 1rem;
+        line-height: 1.65;
+        margin-bottom: 1rem;
+    }
+
+    .indice-lista li {
+        width: 100%;
+    }
+
+    .indice-lista a {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .seccion blockquote {
+        padding: 0.8rem 1.2rem;
+        margin: 1rem 0;
+    }
+
+    .boton-volver {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        display: inline-block;
+        width: auto;
+    }
+
+    .seccion::after {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .seccion p {
+        font-size: 0.95rem;
+    }
+
+    .seccion h3 {
+        font-size: 1.3rem;
+    }
+}
